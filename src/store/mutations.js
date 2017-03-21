@@ -2,7 +2,6 @@ import * as types from './mutation-types'
 
 export default {
   [types.SET_CURRENT_NOTE_ID] (state, id) {
-    console.log(id)
     state.note.id = id
   },
 
@@ -15,7 +14,6 @@ export default {
   },
 
   [types.SET_SAVE_TIMEOUT] (state, { callback, delay }) {
-    console.log('set save timeout')
     state.saveTimeout = setTimeout(callback, delay)
   },
 

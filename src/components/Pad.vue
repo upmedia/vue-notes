@@ -29,13 +29,10 @@ export default {
       'startSaveTimeout'
     ]),
     save () {
-      console.log(this.note.id)
       if (!this.note.id) {
-        console.log('inside if')
         this.saveNote()
         return
       }
-      console.log('after if')
       this.startSaveTimeout()
     }
   }

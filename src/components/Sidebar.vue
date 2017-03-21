@@ -6,13 +6,16 @@
 		<div class="sidebar__content" v-else>
 			Ingen noter endnu - skriv nogen.
 		</div>
+    <div class="sidebar__content">
+      <a href="#" @click.prevent="clearCurrentNote">Opret ny note</a>
+    </div>
 	</div>
 </template>
 
 <script>
 
 import Note from './Note'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -22,6 +25,12 @@ export default {
   computed: {
     ...mapGetters([
       'notes'
+    ])
+  },
+
+  methods: {
+    ...mapActions([
+      'clearCurrentNote'
     ])
   }
 

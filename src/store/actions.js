@@ -36,3 +36,8 @@ export const startSaveTimeout = ({commit, dispatch, state}) => {
 export const stopSaveTimeout = ({commit, dispatch, state}) => {
   commit(mutations.CLEAR_SAVE_TIMEOUT)
 }
+
+export const clearCurrentNote = ({commit, dispatch}) => {
+  dispatch('stopSaveTimeout')
+  commit(mutations.SET_CURRENT_NOTE, null)
+}

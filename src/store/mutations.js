@@ -30,5 +30,11 @@ export default {
       return
     }
     state.note = note
+  },
+
+  [types.DELETE_NOTE] (state, id) {
+    state.notes = state.notes.filter((note) => {
+      return note.id !== id
+    })
   }
 }

@@ -1,7 +1,7 @@
 <template>
 	<div class="sidebar">
     <div v-if="notes.length">
-      <note v-for="note in notes" :note="note"></note>
+      <note v-for="note in notes" :key="note.id" :note="note"></note>
     </div>
 		<div class="sidebar__content" v-else>
 			Ingen noter endnu - skriv nogen.
